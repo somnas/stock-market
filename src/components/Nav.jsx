@@ -5,23 +5,23 @@ export default function Nav() {
 	return (
 		<ul className="navbar list-unstyled">
 			<li className="nav-item">
-				<Link className="nav-link" to="/">
-					Home
+				<Link className="nav-link" to="/market/crypto">
+					Crypto
 				</Link>
 			</li>
 			<li className="nav-item">
-				<Link className="nav-link" to="/market/name">
-					List
+				<Link className="nav-link" to="/market/currencies">
+					Currencies
 				</Link>
 			</li>
 			<li className="nav-item">
-				<Link className="nav-link" to="/markets">
+				<Link className="nav-link" to="/market/indexes">
+					Indexes
+				</Link>
+			</li>
+			<li className="nav-item">
+				<Link className="nav-link" to="/market/markets">
 					Markets
-				</Link>
-			</li>
-			<li className="nav-item">
-				<Link className="nav-link" to="/ticker/id">
-					Ticker
 				</Link>
 			</li>
 		</ul>
