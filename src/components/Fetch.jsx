@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ListedItem from "./ListedItem";
 
 export default function Fetch({ name, subName = "" }) {
 	const url =
@@ -17,8 +18,8 @@ export default function Fetch({ name, subName = "" }) {
 		<>
 			{!marketData && <p>Loading</p>}
 			{marketData &&
-				Object.entries(marketData[name][subName])[1].map((item, data) => {
-					return Object.keys(item);
+				Object.entries(marketData[name][subName]).map((item) => {
+					return <ListedItem key={item[0]} value={item[1]} />;
 				})}
 		</>
 	);
