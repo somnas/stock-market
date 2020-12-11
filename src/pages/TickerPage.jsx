@@ -8,7 +8,6 @@ export default function TickerPage(props) {
 
 	return (
 		<div>
-			<h2>{ticker}</h2>
 			<Fetch ticker={ticker} name={name} />
 		</div>
 	);
