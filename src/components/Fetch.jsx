@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ListedItem from "./ListedItem";
 
-export default function Fetch({ name, subName = "" }) {
+export default function Fetch({ name, subName = "", ticker = null }) {
 	const url =
 		"https://market-data-collector.firebaseio.com/market-collector.json";
 	const [marketData, setMarketData] = useState(null);
@@ -13,6 +13,10 @@ export default function Fetch({ name, subName = "" }) {
 	if (name === "crypto") subName = "usd";
 	if (name === "currencies") subName = "sek";
 	if (name === "indexes") subName = "se";
+
+	if (ticker) {
+		return <>{ticker}</>;
+	}
 
 	return (
 		<>
