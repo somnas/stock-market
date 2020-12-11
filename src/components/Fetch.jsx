@@ -12,10 +12,14 @@ export default function Fetch({ name, subName = "" }) {
 	if (name === "crypto") subName = "usd";
 	if (name === "currencies") subName = "sek";
 	if (name === "indexes") subName = "se";
+
 	return (
 		<>
 			{!marketData && <p>Loading</p>}
-			{marketData && console.log(marketData[name][subName])}
+			{marketData &&
+				Object.entries(marketData[name][subName])[1].map((item, data) => {
+					return Object.keys(item);
+				})}
 		</>
 	);
 }
