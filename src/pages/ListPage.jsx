@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function HomePage() {
+export default function ListPage() {
 	return (
 		<div>
-			<h2>Welcome</h2>
+			<h2>List Page</h2>
 		</div>
 	);
 }
