@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ListedItem from "./ListedItem";
+import TickerItem from "./TickerItem";
 
 export default function Fetch({ name, subName = "", ticker = null }) {
 	const url =
@@ -14,8 +15,14 @@ export default function Fetch({ name, subName = "", ticker = null }) {
 	if (name === "currencies") subName = "sek";
 	if (name === "indexes") subName = "se";
 
+	// <TickerItem key={item[0]} value={item[1]} />
 	if (ticker) {
-		return <>{ticker}</>;
+		return (
+			<>
+				{!marketData && <p>Loading</p>}
+				{marketData && <TickerItem value={marketData[name][subName][ticker]} />}
+			</>
+		);
 	}
 
 	return (
@@ -23,7 +30,7 @@ export default function Fetch({ name, subName = "", ticker = null }) {
 			{!marketData && <p>Loading</p>}
 			{marketData &&
 				Object.entries(marketData[name][subName]).map((item) => {
-					return <ListedItem key={item[0]} value={item[1]} />;
+					return <ListedItem key={item[0]} value={item[1]} name={name} />;
 				})}
 		</>
 	);

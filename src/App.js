@@ -12,7 +12,7 @@ function App() {
 		<div className="container">
 			<Nav />
 			<Switch>
-				<Route path="/ticker/:id" component={TickerPage} />
+				<Route path="/market/:name/:id" component={TickerPage} />
 				<Route path="/markets">
 					<MarketPage />
 				</Route>
