@@ -8,7 +8,7 @@ export default function ListedItem({ value, name }) {
 				className="btn btn-secondary"
 				to={`/market/${name}/${value.ticker}`}
 			>
-				{value.ticker}
+				{value.name}
 			</Link>
 		</div>
 	);

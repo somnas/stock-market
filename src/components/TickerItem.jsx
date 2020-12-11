@@ -3,8 +3,9 @@ import React from "react";
 export default function TickerItem({ value }) {
 	return (
 		<div>
-			<h1>{value.ticker}</h1>
-			<h2>Price: {value.price}</h2>
+			<h1>{value.name}</h1>
+			<h2>{value.ticker}</h2>
+			<h3>Price: {value.price}</h3>
 			{value.today && <p>Today: {value.today}</p>}
 			{value.w1 && <p>W1: {value.w1}</p>}
 			{value.mtd && <p>MTD: {value.mtd}</p>}
