@@ -5,10 +5,12 @@ import HomePage from "./pages/HomePage";
 import MarketPage from "./pages/MarketPage";
 import TickerPage from "./pages/TickerPage";
 import ListPage from "./pages/ListPage";
+import Nav from "./components/Nav";
 
 function App() {
 	return (
-		<div>
+		<div className="container">
+			<Nav />
 			<Switch>
 				<Route path="/ticker/:id" component={TickerPage} />
 				<Route path="/markets">
