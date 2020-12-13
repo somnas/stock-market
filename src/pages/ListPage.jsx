@@ -3,11 +3,16 @@ import Fetch from "../components/Fetch";
 
 export default function ListPage() {
 	const name = window.location.pathname.split("/")[2];
+	const marketMarkets = window.location.pathname.split("/")[3];
+
+	console.log('this is listpage!')
+	console.log("name: "+ name);
+	console.log(marketMarkets)
 
 	return (
 		<div>
-			<h2>{name}</h2>
-			<Fetch name={name} />
+			<h2>{marketMarkets ? name +' > '+ marketMarkets : name }</h2>
+			<Fetch name={name} marketMarkets={marketMarkets}  />
 		</div>
 	);
 }

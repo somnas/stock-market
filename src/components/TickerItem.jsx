@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function TickerItem({ value }) {
+
 	return (
 		<div>
 			<h1>{value.name}</h1>
@@ -15,6 +16,7 @@ export default function TickerItem({ value }) {
 			{value.y5 && <p>Y5: {value.y5}</p>}
 			{value.ytd && <p>YTD: {value.ytd}</p>}
 		</div>
+		
 	);
 }
 

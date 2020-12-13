@@ -2,24 +2,58 @@ import React, { useState, useEffect } from "react";
 import ListedItem from "./ListedItem";
 import TickerItem from "./TickerItem";
 
-export default function Fetch({ name, subName = "", ticker = null }) {
-	const url =
-		"https://market-data-collector.firebaseio.com/market-collector.json";
+export default function Fetch({ name, subName = null, ticker = null, marketMarkets = null }) {
+	const url = "https://market-data-collector.firebaseio.com/market-collector.json";
 	const [marketData, setMarketData] = useState(null);
 	useEffect(() => {
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => setMarketData(data));
 	}, []);
+
+	//moved loading outside other returns
+	if (!marketData) return <p>loading...</p>
+
 	if (name === "crypto") subName = "usd";
 	if (name === "currencies") subName = "sek";
 	if (name === "indexes") subName = "se";
 
-	// <TickerItem key={item[0]} value={item[1]} />
+
+	if (name === "markets" && marketMarkets && !ticker) {
+		return (
+			<>
+				{marketData &&
+					Object.entries(marketData[name][marketMarkets]).map((item) => {
+						return <ListedItem key={item[0]} value={item[1]} name={name} marketMarkets={marketMarkets} />;
+					})
+				}
+			</>
+		)
+	}
+
+	if (marketMarkets && ticker) {
+		return (
+			<>
+				{marketData && <TickerItem value={marketData[name][marketMarkets][ticker]} />}
+			</>
+		);
+	}
+
+	if (name === "markets") {
+		return (
+			<>
+			{marketData &&
+				Object.entries(marketData[name]).map((item) => {
+					return <ListedItem key={item[0]} value={{name:item[0]}} name={item[0]} />;
+				})
+			}
+		</>
+		)
+	}
+
 	if (ticker) {
 		return (
 			<>
-				{!marketData && <p>Loading</p>}
 				{marketData && <TickerItem value={marketData[name][subName][ticker]} />}
 			</>
 		);
@@ -27,11 +61,11 @@ export default function Fetch({ name, subName = "", ticker = null }) {
 
 	return (
 		<>
-			{!marketData && <p>Loading</p>}
 			{marketData &&
 				Object.entries(marketData[name][subName]).map((item) => {
 					return <ListedItem key={item[0]} value={item[1]} name={name} />;
-				})}
+				})
+			}
 		</>
 	);
 }
