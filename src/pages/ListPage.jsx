@@ -12,7 +12,9 @@ export default function ListPage() {
 	return (
 		<div>
 			<h2>{marketMarkets ? name +' > '+ marketMarkets : name }</h2>
-			<Fetch name={name} marketMarkets={marketMarkets}  />
+			<div className="row">
+				<Fetch name={name} marketMarkets={marketMarkets}  />
+			</div>
 		</div>
 	);
 }
