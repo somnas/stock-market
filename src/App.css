@@ -37,18 +37,52 @@ nav img {
   text-decoration: none;
 }
 
+
+.ticker-history span {
+  display: inline-block;
+  text-align: right
+}
+.ticker-history :nth-child(odd) {
+  width: 45px;
+}
+.ticker-history :nth-child(even) {
+  width: 80px;
+  font-weight: 600;
+}
+
+
+.tickeritem {
+
+}
+.tickeritem .price {
+  font-size: 50px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+.tickeritem .today {
+  font-size: 40px;
+  margin-bottom: 0px;
+  margin-top: -20px;
+}
+
+
+
 .test {
   white-space: nowrap;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 
 
 .listitem {
-  transform: scale(1); transition: transform 0.2s
+  transform: scale(1); transition: transform 0.2s;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 .listitem:hover {
-  transform: scale(1.03); transition: transform 0.2s
+  transform: scale(1.038); transition: transform 0.2s;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .logo {

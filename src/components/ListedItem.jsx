@@ -6,14 +6,16 @@ export default function ListedItem({ value, name, marketMarkets }) {
 	//IF it's a market
 	if(!value.ticker){
 		return (
-			<>
+			<div className=" col-lg-12 box">
 				<Link
-					className="btn btn-secondary bg-primary"
+					className="no-underline"
 					to={`/market/markets/${name}`}
 				>
-					{value.name}
+					<div className="row text-dark mb-3 mr-1 ml-1 p-3 bg-white shadow rounded-lg listitem">
+						{value.name}
+					</div>
 				</Link>
-			</>
+			</div>
 		);
 	}
 
