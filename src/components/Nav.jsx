@@ -8,8 +8,8 @@ import StyledLink from '../Styled/StyledLink'
 
 export default function Nav() {
 	return (
-		<nav className="nav justify-content-between shadow">
-			<Link className="nav-link text-dark" to="/market/crypto">
+		<nav className="nav justify-content-between">
+			<Link className="nav-link" to="/market/crypto">
 				<StyledLink>
 					<img src={iconCrypto}/>
 					Crypto		

@@ -27,7 +27,7 @@ export default function ListedItem({ value, name, marketMarkets }) {
 					: `/market/${name}/${value.ticker}`
 				}
 			>
-					<div className="row text-dark mb-3 mr-1 ml-1 p-3 bg-white shadow rounded-lg">
+					<div className="row text-dark mb-3 mr-1 ml-1 p-3 bg-white shadow rounded-lg listitem">
 
 						<div className="col-8 col-xl-9 test">
 							<h3>{value.name}</h3>
