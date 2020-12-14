@@ -11,19 +11,15 @@ function App() {
 
 			<Switch>
 
-				<Route exact path="/market/:name/:marketMarkets/:id" component={TickerPage} >
-				</Route>
+				<Route exact path="/market/:name/:marketMarkets/:id" component={TickerPage} />
 
-				<Route exact path="/market/markets/:name" component={ListPage} >
-				</Route>
+				<Route exact path="/market/markets/:name" component={ListPage} />
 
-				<Route path="/market/:name/:id" component={TickerPage} >
-				</Route>
+				<Route path="/market/:name/:id" component={TickerPage} />
 
 				<Route path="/market/:name" component={ListPage} />
 
-				<Route path="/" component={HomePage} >
-				</Route>
+				<Route path="/" component={HomePage} />
 
 			</Switch>
 			
