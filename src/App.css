@@ -4,11 +4,15 @@
 }
 
 .logo {
-  margin-top: 5vh; 
-  position: absolute; 
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.spinspin {
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
@@ -36,6 +40,13 @@ nav img {
 }
 
 /***** homepage *****/
+.homepage .logo {
+  margin-top: 5vh; 
+  position: absolute; 
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 400px;
+}
 .homepage nav {
   box-shadow: none !important;
   text-align: center;
@@ -47,6 +58,9 @@ nav img {
 }
 
 /***** tickerpage *****/
+.tickerpage {
+  text-align: center;
+}
 .tickerpage .price {
   font-size: 50px;
   margin-bottom: 0px;
