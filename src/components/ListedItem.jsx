@@ -10,15 +10,18 @@ function getClass(value) {
 
 export default function ListedItem({ value, name, marketMarkets }) {
 
-	//IF it's a market
+	//if nameless, stop!
+	if(value.name.length === 0) return <></>
+
+	//if markets is clicked
 	if(!value.ticker){
 		return (
-			<div className=" col-lg-12 box">
+			<div className="col-lg-12">
 				<Link
 					className="no-underline"
 					to={`/market/markets/${name}`}
 				>
-					<div className="row text-dark mb-3 mr-1 ml-1 p-3 bg-white shadow rounded-lg listitem">
+					<div className="row text-dark mb-3 mr-1 ml-1 p-3 bg-white shadow rounded-lg marketitem">
 						{value.name}
 					</div>
 				</Link>
@@ -26,9 +29,9 @@ export default function ListedItem({ value, name, marketMarkets }) {
 		);
 	}
 
-	//if its 
+	//else list tickeritems
 	return (
-		<div className=" col-lg-6 box">
+		<div className="col-lg-6">
 			<div>
 				<Link
 					className="no-underline"
