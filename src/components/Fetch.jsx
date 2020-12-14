@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ListedItem from "./ListedItem";
 import TickerItem from "./TickerItem";
+import Spinner from 'react-bootstrap/Spinner'
 
 export default function Fetch({ name, subName = null, ticker = null, marketMarkets = null }) {
 	const url = "https://market-data-collector.firebaseio.com/market-collector.json";
@@ -12,7 +13,13 @@ export default function Fetch({ name, subName = null, ticker = null, marketMarke
 	}, []);
 
 	//moved loading outside other returns
-	if (!marketData) return <p>loading...</p>
+	if (!marketData) return (
+		<div className="spinspin">
+		<Spinner animation="border" role="status">
+  		<span className="sr-only">Loading...</span>
+		</Spinner>
+		</div>
+	)
 
 	if (name === "crypto") subName = "usd";
 	if (name === "currencies") subName = "sek";
