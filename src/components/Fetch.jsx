@@ -15,9 +15,9 @@ export default function Fetch({ name, subName = null, ticker = null, marketMarke
 	//moved loading outside other returns
 	if (!marketData) return (
 		<div className="spinspin">
-		<Spinner animation="border" role="status">
-  		<span className="sr-only">Loading...</span>
-		</Spinner>
+			<Spinner animation="border" role="status">
+				<span className="sr-only">Loading...</span>
+			</Spinner>
 		</div>
 	)
 
