@@ -1,4 +1,5 @@
 import Fetch from "../components/Fetch";
+import Nav from "../components/Nav";
 
 export default function TickerPage(props) {
 	const ticker = props.match.params.id;
@@ -11,6 +12,9 @@ export default function TickerPage(props) {
 	console.log('name: '+name)
 
 	return ( 
-		<Fetch name={name} ticker={ticker} marketMarkets={marketMarkets}  />
+		<>
+			<Nav/>
+			<Fetch name={name} ticker={ticker} marketMarkets={marketMarkets}  />
+		</>
 	);
 }

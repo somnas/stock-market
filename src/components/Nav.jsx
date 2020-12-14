@@ -1,20 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import iconCrypto from '../img/icons/crypto.png';
+import iconCurrencies from '../img/icons/currencies.png';
+import iconIndexes from '../img/icons/indexes.png';
+import iconMarkets from '../img/icons/markets.png';
+import StyledLink from '../Styled/StyledLink'
 
 export default function Nav() {
 	return (
 		<nav className="nav justify-content-between shadow">
-			<Link className="nav-link" to="/market/crypto">
-				Crypto
+			<Link className="nav-link text-dark" to="/market/crypto">
+				<StyledLink>
+					<img src={iconCrypto}/>
+					Crypto		
+				</StyledLink>
 			</Link>
 			<Link className="nav-link" to="/market/currencies">
-				Currencies
+				<StyledLink>
+					<img src={iconCurrencies}/>
+					Currencies	
+				</StyledLink>
 			</Link>
 			<Link className="nav-link" to="/market/indexes">
-				Indexes
+				<StyledLink>
+					<img src={iconIndexes}/>
+					Indexes		
+				</StyledLink>
 			</Link>
 			<Link className="nav-link" to="/market/markets">
-				Markets
+				<StyledLink>
+					<img src={iconMarkets}/>
+					Markets
+				</StyledLink>
 			</Link>
 		</nav>
 	);

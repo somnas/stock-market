@@ -4,12 +4,11 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import TickerPage from "./pages/TickerPage";
 import ListPage from "./pages/ListPage";
-import Nav from "./components/Nav";
 
 function App() {
 	return (
 		<div className="container">
-			<Nav />
+
 			<Switch>
 
 				<Route exact path="/market/:name/:marketMarkets/:id" component={TickerPage} >
@@ -27,6 +26,7 @@ function App() {
 				</Route>
 
 			</Switch>
+			
 		</div>
 	);
 }
