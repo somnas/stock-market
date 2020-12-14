@@ -8,7 +8,6 @@ import ListPage from "./pages/ListPage";
 function App() {
 	return (
 		<div className="container">
-
 			<Switch>
 
 				<Route exact path="/market/:name/:marketMarkets/:id" component={TickerPage} />
@@ -22,7 +21,6 @@ function App() {
 				<Route path="/" component={HomePage} />
 
 			</Switch>
-			
 		</div>
 	);
 }
