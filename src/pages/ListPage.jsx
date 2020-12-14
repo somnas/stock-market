@@ -1,5 +1,6 @@
 import React from "react";
 import Fetch from "../components/Fetch";
+import Logo from "../components/Logo";
 import Nav from "../components/Nav";
 
 export default function ListPage() {
@@ -9,6 +10,7 @@ export default function ListPage() {
 
 	return (
 		<div className="listpage">
+			<Logo/>
 			<Nav/>
 			<h1 className="mb-5 mt-5">{marketMarkets 
 				? name +' > '+ marketMarkets 

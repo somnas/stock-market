@@ -1,4 +1,5 @@
 import Fetch from "../components/Fetch";
+import Logo from "../components/Logo";
 import Nav from "../components/Nav";
 
 export default function TickerPage(props) {
@@ -9,9 +10,10 @@ export default function TickerPage(props) {
 
 	return ( 
 		<div className="tickerpage">
+			<Logo/>
 			<Nav/>
 			<Fetch name={name} ticker={ticker} marketMarkets={marketMarkets}  />
 		</div>
 	);
-	
+
 }
