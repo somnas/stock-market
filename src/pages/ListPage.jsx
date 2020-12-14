@@ -10,7 +10,10 @@ export default function ListPage() {
 	return (
 		<div className="listpage">
 			<Nav/>
-			<h1 className="mb-5 mt-5">{marketMarkets ? name +' > '+ marketMarkets : name }</h1>
+			<h1 className="mb-5 mt-5">{marketMarkets 
+				? name +' > '+ marketMarkets 
+				: name }
+			</h1>
 			<div className="row">
 				<Fetch name={name} marketMarkets={marketMarkets}  />
 			</div>
