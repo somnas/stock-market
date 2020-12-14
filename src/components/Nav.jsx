@@ -4,7 +4,7 @@ import iconCrypto from '../img/icons/crypto.png';
 import iconCurrencies from '../img/icons/currencies.png';
 import iconIndexes from '../img/icons/indexes.png';
 import iconMarkets from '../img/icons/markets.png';
-import StyledLink from '../Styled/StyledLink'
+import StyledLink from '../styled/StyledLink'
 
 export default function Nav() {
 	return (
