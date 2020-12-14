@@ -29,11 +29,11 @@ export default function ListedItem({ value, name, marketMarkets }) {
 			>
 					<div className="row text-dark mb-3 mr-1 ml-1 p-3 bg-white shadow rounded-lg">
 
-						<div className="col-8">
+						<div className="col-8 col-xl-9 test">
 							<h3>{value.name}</h3>
 							({value.ticker})
 						</div>
-						<div className="col-4 text-right">
+						<div className="col-4 col-xl-3 text-right" z-index="1000">
 							<h3>{value.price}</h3>
 
 							{value.today > 0 &&

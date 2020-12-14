@@ -35,6 +35,13 @@ nav img {
   text-decoration: none;
 }
 
+.test {
+  white-space: nowrap;
+    overflow: hidden;
+}
+
+
+
 .listitem {
   background: #FFFFFF;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
