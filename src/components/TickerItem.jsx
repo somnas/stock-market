@@ -18,25 +18,25 @@ export default function TickerItem({ value }) {
 			<div className="item row text-dark mb-3 mr-1 ml-1 p-3 bg-white shadow rounded-lg">
 				<div className="col-8 text-left">
 					<p className="price">{value.price}</p>
-					{!value.today || value.today !== undefined &&
+					{(!value.today || value.today !== undefined) &&
 						<p className={`today ${getClass(value.today)}`}>{value.today}%</p>
 					}
 				</div>
 
 				<div className="col-4 text-right my-auto">
-					{!value.w1 || value.w1 !== undefined &&
+					{(!value.w1 || value.w1 !== undefined) &&
 						<div className="history"><span>W1:</span><span className={getClass(value.w1)}>{value.w1}%</span></div>
 					}
-					{!value.mtd || value.mtd !== undefined &&
+					{(!value.mtd || value.mtd !== undefined) &&
 						<div className="history"><span>MTD:</span><span className={getClass(value.mtd)}>{value.mtd}%</span></div>
 					}
-					{!value.y3 || value.y3 !== undefined &&
+					{(!value.y3 || value.y3 !== undefined) &&
 						<div className="history"><span>Y3:</span><span className={getClass(value.y3)}>{value.y3}%</span></div>
 					}
-					{!value.w5 || value.w5 !== undefined &&
+					{(!value.w5 || value.w5 !== undefined) &&
 						<div className="history"><span>Y5:</span><span className={getClass(value.y5)}>{value.y5}%</span></div>
 					}
-					{!value.ytd || value.ytd !== undefined &&
+					{(!value.ytd || value.ytd !== undefined) &&
 						<div className="history"><span>YTD:</span><span className={getClass(value.ytd)}>{value.ytd}%</span></div>
 					}
 				</div>

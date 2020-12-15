@@ -11,25 +11,25 @@ export default function Nav() {
 		<nav className="nav justify-content-between">
 			<Link className="nav-link" to="/market/crypto">
 				<StyledLink>
-					<img src={iconCrypto}/>
+					<img src={iconCrypto} alt="Crypto"/>
 					Crypto		
 				</StyledLink>
 			</Link>
 			<Link className="nav-link" to="/market/currencies">
 				<StyledLink>
-					<img src={iconCurrencies}/>
+					<img src={iconCurrencies} alt="Currencies"/>
 					Currencies	
 				</StyledLink>
 			</Link>
 			<Link className="nav-link" to="/market/indexes">
 				<StyledLink>
-					<img src={iconIndexes}/>
+					<img src={iconIndexes} alt="Indexes"/>
 					Indexes		
 				</StyledLink>
 			</Link>
 			<Link className="nav-link" to="/market/markets">
 				<StyledLink>
-					<img src={iconMarkets}/>
+					<img src={iconMarkets} alt="Markets"/>
 					Markets
 				</StyledLink>
 			</Link>
