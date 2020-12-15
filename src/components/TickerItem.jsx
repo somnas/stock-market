@@ -10,7 +10,7 @@ export default function TickerItem({ value }) {
 	}
 
 	return (
-		<div className="tickeritem text-center">
+		<div className="tickeritem text-center"> 
 
 			<h1 className="mt-5">{value.name}</h1>
 			<h2 className="mb-5">{value.ticker}</h2>
