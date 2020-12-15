@@ -8,7 +8,9 @@ export default function HomePage() {
 	return (
 		<div className="homepage">
 			<div className="d-flex vh-100 align-items-center flex-flow-column flex-column justify-content-between">
-				<StyledLogo src={logo} className="logo" alt="Stock Market" />
+				<StyledLogo frontpage={true}>
+					<img src={logo} alt="Stock Market" />
+				</StyledLogo>
 				<div className="w-100">
 					<StyledNav>
 						<Nav />

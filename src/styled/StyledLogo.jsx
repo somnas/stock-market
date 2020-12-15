@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
-const StyledLogo = styled.img`
-	width: 500px;
-	margin-top: 40px;
-	background: blue;
+const StyledLogo = styled.div`
+	display: flex;
+	justify-content: center;
+
+	img {
+		width: 300px;
+		margin-top: 50px;
+	}
 `;
 
 export default StyledLogo;
+
+/* background: ${(props) => (props.frontpage ? "green" : "red")}; */

@@ -1,8 +1,10 @@
 import React from "react";
 import Fetch from "../components/Fetch";
-import Logo from "../components/Logo";
+import logo from "../img/logo.svg";
+
 import Nav from "../components/Nav";
 import StyledNav from "../styled/StyledNav";
+import StyledLogo from "../styled/StyledLogo";
 
 export default function ListPage() {
 	const name = window.location.pathname.split("/")[2];
@@ -10,8 +12,10 @@ export default function ListPage() {
 
 	return (
 		<div className="listpage">
-			<Logo />
-			<StyledNav>
+			<StyledLogo>
+				<img src={logo} alt="Stock Market" />
+			</StyledLogo>
+			<StyledNav listPage={true}>
 				<Nav />
 			</StyledNav>
 			<h1 className="mb-5 mt-5">
