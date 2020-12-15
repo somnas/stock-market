@@ -4,9 +4,9 @@ import Logo from "../components/Logo";
 import Nav from "../components/Nav";
 import StyledNav from "../styled/StyledNav";
 
-export default function ListPage() {
-	const name = window.location.pathname.split("/")[2];
-	const marketMarkets = window.location.pathname.split("/")[3];
+export default function ListPage(props) {
+	const name = props.match.params.name;
+	const marketMarkets = props.match.params.marketMarkets;
 
 	return (
 		<div className="listpage">

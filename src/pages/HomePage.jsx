@@ -15,7 +15,6 @@ export default function HomePage() {
 					</StyledNav>
 				</div>
 			</div>
-			<SpecialNeeds />
 		</div>
 	);
 }
