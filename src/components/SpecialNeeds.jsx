@@ -1,5 +1,5 @@
 import React from "react";
-import trump from "../specialNeeds/trump.jpg";
+import trump from "../specialNeeds/trump_2.jpg";
 import horn from "../specialNeeds/horn.mp3";
 
 export default function SpecialNeeds() {

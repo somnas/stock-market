@@ -60,8 +60,7 @@ nav img {
 }
 
 .homepage .hero {
-	border: 2px solid orange;
-	border-radius: 100%;
+	border: 10px solid orange;
 }
 
 /***** tickerpage *****/
