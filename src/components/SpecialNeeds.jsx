@@ -8,7 +8,7 @@ export default function SpecialNeeds() {
 		<div>
 			<img className="hero img-fluid" src={trump} alt="Trump" />
 			<p>FRAUD, MEXICO, WALL</p>
-			<audio controls autoPlay>
+			<audio controls>
 				<source src={horn} type="audio/mpeg" />
 			</audio>
 			{/* {audio_correct.play()} */}
