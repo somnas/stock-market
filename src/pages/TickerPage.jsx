@@ -1,19 +1,20 @@
 import Fetch from "../components/Fetch";
 import Logo from "../components/Logo";
 import Nav from "../components/Nav";
+import StyledNav from "../styled/StyledNav";
 
 export default function TickerPage(props) {
-
 	const ticker = props.match.params.id;
 	const name = props.match.params.name;
-	const marketMarkets = props.match.params.marketMarkets
+	const marketMarkets = props.match.params.marketMarkets;
 
-	return ( 
+	return (
 		<div className="tickerpage">
-			<Logo/>
-			<Nav/>
-			<Fetch name={name} ticker={ticker} marketMarkets={marketMarkets}  />
+			<Logo />
+			<StyledNav>
+				<Nav />
+			</StyledNav>
+			<Fetch name={name} ticker={ticker} marketMarkets={marketMarkets} />
 		</div>
 	);
-
 }

@@ -1,130 +1,136 @@
 .App {
-  text-align: center;
-  background-color: #F1F1F1;
+	text-align: center;
+	background-color: #f1f1f1;
 }
 
 .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .spinspin {
-  margin-top: 200px;
-  margin-left: auto;
-  margin-right: auto;
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 body {
-  background-color: #F1F1F1 !important
+	background-color: #f1f1f1 !important;
 }
 
 .nowrap {
-  white-space: nowrap;
-  overflow: hidden;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .no-underline:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /***** nav *****/
 nav {
-  text-align: center;
+	text-align: center;
 }
 nav img {
-  width: 40px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	width: 40px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /***** homepage *****/
+.homepage {
+}
 .homepage .logo {
-  margin-top: 5vh; 
-  position: absolute; 
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 400px;
+	margin-top: 5vh;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 400px;
 }
 .homepage nav {
-  box-shadow: none !important;
-  text-align: center;
+	box-shadow: none !important;
+	text-align: center;
 }
 .homepage nav img {
-  width: auto;
-  display: block;
-  margin-bottom: 10px;
+	width: auto;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.homepage .hero {
+	border: 2px solid orange;
+	border-radius: 100%;
 }
 
 /***** tickerpage *****/
 .tickerpage {
-  text-align: center;
+	text-align: center;
 }
 .tickerpage .price {
-  font-size: 50px;
-  margin-bottom: 0px;
-  font-weight: 600;
+	font-size: 50px;
+	margin-bottom: 0px;
+	font-weight: 600;
 }
 .tickerpage .today {
-  font-size: 40px;
-  margin-bottom: 0px;
-  margin-top: -20px;
+	font-size: 40px;
+	margin-bottom: 0px;
+	margin-top: -20px;
 }
 .tickerpage .history span {
-  display: inline-block;
-  text-align: right
+	display: inline-block;
+	text-align: right;
 }
 .tickerpage .history :nth-child(odd) {
-  width: 45px;
+	width: 45px;
 }
 .tickerpage .history :nth-child(even) {
-  width: 80px;
-  font-weight: 600;
+	width: 80px;
+	font-weight: 600;
 }
 
 /***** listpage *****/
 .listpage .listitem {
-  transform: scale(1); transition: transform 0.2s;
-  backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
+	transform: scale(1);
+	transition: transform 0.2s;
+	backface-visibility: hidden;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 .listpage .listitem:hover {
-  transform: scale(1.038); transition: transform 0.2s;
-  backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
+	transform: scale(1.038);
+	transition: transform 0.2s;
+	backface-visibility: hidden;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 .listpage h1::first-letter {
-  text-transform: capitalize;
+	text-transform: capitalize;
 }
 .listpage .marketitem {
-  display: block;
-  font-size: 20px;
-  text-align: center;
+	display: block;
+	font-size: 20px;
+	text-align: center;
 }
-
-
-
 
 /***** ?????? *****/
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
