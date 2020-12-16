@@ -1,11 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const StyledNav = styled.nav`
 	@media (min-width: 769px) {
-		background: ${(props) => (props.listPage ? "white" : "")};
 		z-index: 1;
-		position: ${(props) => (props.listPage ? "sticky" : "")};
+
+		${({ listPage }) =>
+			listPage &&
+			css`
+				background: white;
+				color: sticky;
+			`}
+
 		top: 0;
 	}
 

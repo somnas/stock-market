@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { StyledListedItem } from "../styled/StyledListedItem";
 
 function getClass(value) {
 	let className = "text-success";
@@ -16,11 +17,13 @@ export default function ListedItem({ value, name, marketMarkets }) {
 	if (!value.ticker) {
 		return (
 			<div className="col-lg-12 listitem">
-				<Link className="no-underline" to={`/market/markets/${name}`}>
-					<div className="row text-dark mb-3 mr-1 ml-1 p-3 bg-white shadow rounded-lg marketitem">
-						{value.name}
-					</div>
-				</Link>
+				<StyledListedItem market={true}>
+					<Link className="no-underline" to={`/market/markets/${name}`}>
+						<div className="row bg-primary mb-3 mr-1 ml-1 p-3 shadow rounded-lg marketitem">
+							{value.name}
+						</div>
+					</Link>
+				</StyledListedItem>
 			</div>
 		);
 	}
@@ -28,7 +31,7 @@ export default function ListedItem({ value, name, marketMarkets }) {
 	//else list tickeritems
 	return (
 		<div className="col-lg-6">
-			<div>
+			<StyledListedItem tickerItem={true}>
 				<Link
 					className="no-underline"
 					to={
@@ -47,7 +50,7 @@ export default function ListedItem({ value, name, marketMarkets }) {
 						</div>
 					</div>
 				</Link>
-			</div>
+			</StyledListedItem>
 		</div>
 	);
 }

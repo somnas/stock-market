@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import TickerPage from "./pages/TickerPage";
 import ListPage from "./pages/ListPage";
+// import { colors } from "./Library";
 
 function App() {
 	return (

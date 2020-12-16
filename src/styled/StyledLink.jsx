@@ -23,13 +23,14 @@ const StyledLink = styled.div`
         }
     }
     @media (max-width: 768px) {
+        font-size: 0.7rem;
         color: white; 
 	svg path {
 		fill: white;
 	}
 	svg {
-		max-width: 45px;
-		max-height: 45px;
+		max-width: 20px;
+		max-height: 20px;
 	}
 }
 `;
