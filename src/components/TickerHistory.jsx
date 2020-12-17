@@ -20,20 +20,15 @@ export default function TickerHistory(props) {
 				let value = item[1];
 				console.log(value);
 				return (
-					// {(!value || value !== undefined) && (
-					// 	<div className="history">
-					// 		<span>W1:</span>
-					// 		<span className={getClass(value.w1)}>{value.w1}%</span>
-					// 	</div>
-					// )}
-					<div className="history">
-						<span>{key}:</span>
-						<span className={getClass(value)}>
-							{getOperator(value)}
-							{value}%
-						</span>
-						{key}: {value}
-					</div>
+					(value || value !== undefined) && (
+						<div className="history">
+							<span>{key.toUpperCase()}:</span>
+							<span className={getClass(value)}>
+								{getOperator(value)}
+								{value}%
+							</span>
+						</div>
+					)
 				);
 			})}
 		</div>

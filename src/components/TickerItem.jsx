@@ -42,36 +42,6 @@ export default function TickerItem({ value }) {
 						y5={value.y5}
 						ytd={value.ytd}
 					/>
-					{(!value.w1 || value.w1 !== undefined) && (
-						<div className="history">
-							<span>W1:</span>
-							<span className={getClass(value.w1)}>{value.w1}%</span>
-						</div>
-					)}
-					{(!value.mtd || value.mtd !== undefined) && (
-						<div className="history">
-							<span>MTD:</span>
-							<span className={getClass(value.mtd)}>{value.mtd}%</span>
-						</div>
-					)}
-					{(!value.y3 || value.y3 !== undefined) && (
-						<div className="history">
-							<span>Y3:</span>
-							<span className={getClass(value.y3)}>{value.y3}%</span>
-						</div>
-					)}
-					{(!value.y5 || value.y5 !== undefined) && (
-						<div className="history">
-							<span>Y5:</span>
-							<span className={getClass(value.y5)}>{value.y5}%</span>
-						</div>
-					)}
-					{(!value.ytd || value.ytd !== undefined) && (
-						<div className="history">
-							<span>YTD:</span>
-							<span className={getClass(value.ytd)}>{value.ytd}%</span>
-						</div>
-					)}
 				</div>
 			</div>
 		</StyledTickerItem>
