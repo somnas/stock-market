@@ -8,8 +8,11 @@ const StyledNav = styled.nav`
 		${({ listPage }) =>
 			listPage &&
 			css`
-				background: white;
 				color: sticky;
+				background: #e5e5e5;
+				position: sticky;
+				width: calc(100% + 50px);
+				margin-left: -25px;
 			`}
 
 		top: 0;

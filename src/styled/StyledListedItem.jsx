@@ -4,6 +4,7 @@ import { colors } from "../Library";
 const StyledListedItem = styled.div`
 	div {
 		color: ${colors.textColor};
+		background: white;
 	}
 
 	&:hover {

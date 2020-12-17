@@ -1,20 +1,9 @@
 import React from "react";
 import { StyledTickerItem } from "../styled/StyledTickerItem";
 import TickerHistory from "../components/TickerHistory";
+import { getClass, getOperator } from "../Library";
 
 export default function TickerItem({ value }) {
-	function getClass(value) {
-		let className = "text-success";
-		if (value < 0) className = "text-danger";
-		if (value === 0) className = "text-dark";
-		return className;
-	}
-	function getOperator(value) {
-		let operator = "";
-		if (value > 0) operator = "+";
-		return operator;
-	}
-
 	if (!value) {
 		return "Nej va tråkigt, det blev visst fel 😰";
 	}
@@ -41,6 +30,8 @@ export default function TickerItem({ value }) {
 						y3={value.y3}
 						y5={value.y5}
 						ytd={value.ytd}
+						getClass={getClass}
+						getOperator={getOperator}
 					/>
 				</div>
 			</div>

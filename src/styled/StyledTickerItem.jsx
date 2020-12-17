@@ -4,7 +4,6 @@ import { colors } from "../Library";
 const StyledTickerItem = styled.div`
 	margin: 0.2rem;
 	padding: 0.1rem;
-	background: ${colors.backgroundColor};
 	color: ${colors.textColor};
 	h1 {
 		font-size: 2.2rem;
