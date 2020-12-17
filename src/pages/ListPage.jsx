@@ -8,9 +8,9 @@ import { StyledListPage } from "../styled/StyledListPage";
 import StyledNav from "../styled/StyledNav";
 import StyledLogo from "../styled/StyledLogo";
 
-export default function ListPage(props) {
-	const name = props.match.params.name;
-	const marketMarkets = props.match.params.marketMarkets;
+export default function ListPage() {
+	const name = window.location.pathname.split("/")[2];
+	const marketMarkets = window.location.pathname.split("/")[3];
 
 	return (
 		<StyledListPage>
