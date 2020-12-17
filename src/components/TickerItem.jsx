@@ -60,7 +60,7 @@ export default function TickerItem({ value }) {
 							<span className={getClass(value.y3)}>{value.y3}%</span>
 						</div>
 					)}
-					{(!value.w5 || value.w5 !== undefined) && (
+					{(!value.y5 || value.y5 !== undefined) && (
 						<div className="history">
 							<span>Y5:</span>
 							<span className={getClass(value.y5)}>{value.y5}%</span>

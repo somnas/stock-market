@@ -16,11 +16,22 @@ export default function TickerHistory(props) {
 	return (
 		<div>
 			{Object.entries(props).map((item) => {
-				console.log(item);
 				let key = item[0];
 				let value = item[1];
+				console.log(value);
 				return (
-					<div>
+					// {(!value || value !== undefined) && (
+					// 	<div className="history">
+					// 		<span>W1:</span>
+					// 		<span className={getClass(value.w1)}>{value.w1}%</span>
+					// 	</div>
+					// )}
+					<div className="history">
+						<span>{key}:</span>
+						<span className={getClass(value)}>
+							{getOperator(value)}
+							{value}%
+						</span>
 						{key}: {value}
 					</div>
 				);
