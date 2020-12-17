@@ -14,7 +14,7 @@ export default function ListPage() {
 
 	return (
 		<StyledListPage>
-			<div className="listpage">
+			<>
 				<StyledLogo>
 					<Logo>
 						<img src={logo} alt="Stock Market" />
@@ -29,7 +29,7 @@ export default function ListPage() {
 				<div className="row">
 					<Fetch name={name} marketMarkets={marketMarkets} />
 				</div>
-			</div>
+			</>
 		</StyledListPage>
 	);
 }

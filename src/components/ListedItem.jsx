@@ -19,7 +19,7 @@ export default function ListedItem({ value, name, marketMarkets }) {
 			<div className="col-lg-12 listitem">
 				<StyledListedItem market={true}>
 					<Link className="no-underline" to={`/market/markets/${name}`}>
-						<div className="row mb-3 mr-1 ml-1 p-3 shadow rounded-lg marketitem">
+						<div className="row mb-3 mr-1 ml-1 p-3 shadow rounded-lg marketitem text-center">
 							{value.name}
 						</div>
 					</Link>
