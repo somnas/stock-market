@@ -1,6 +1,7 @@
 import React from "react";
 import Fetch from "../components/Fetch";
 import logo from "../img/logo.svg";
+import Logo from "../components/Logo";
 
 import Nav from "../components/Nav";
 import { StyledListPage } from "../styled/StyledListPage";
@@ -15,7 +16,9 @@ export default function ListPage() {
 		<StyledListPage>
 			<div className="listpage">
 				<StyledLogo>
-					<img src={logo} alt="Stock Market" />
+					<Logo>
+						<img src={logo} alt="Stock Market" />
+					</Logo>
 				</StyledLogo>
 				<StyledNav listPage={true}>
 					<Nav />

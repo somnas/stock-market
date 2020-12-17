@@ -4,11 +4,14 @@ import { Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import TickerPage from "./pages/TickerPage";
 import ListPage from "./pages/ListPage";
-// import { colors } from "./Library";
+import { colors } from "./Library";
 
 function App() {
 	return (
-		<div className="bg-primary min-vh-100">
+		<div
+			style={{ background: `${colors.backgroundColor}` }}
+			className="min-vh-100"
+		>
 			<div className="container">
 				<Switch>
 					<Route
