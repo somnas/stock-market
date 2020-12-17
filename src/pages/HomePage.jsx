@@ -18,10 +18,6 @@ export default function HomePage() {
 				</div>
 				<SpecialNeeds />
 			</div>
-<<<<<<< HEAD
-		</div>
-=======
 		</>
->>>>>>> stylingComponents
 	);
 }
