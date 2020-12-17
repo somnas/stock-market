@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledLink = styled.div`
     font-weight: 600; 
     font-size: large; 
-    color: black;  
+    color: #011936;  
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -11,8 +11,10 @@ const StyledLink = styled.div`
 		max-width: 90px;
         max-height: 90px;
         transform: scale(1); transition: transform 0.4s; 
-
-	}
+    }
+    svg path {
+        fill: #011936;
+    }
 
     &:hover{
         svg {
@@ -21,13 +23,14 @@ const StyledLink = styled.div`
         }
     }
     @media (max-width: 768px) {
+        font-size: 0.7rem;
         color: white; 
 	svg path {
 		fill: white;
 	}
 	svg {
-		max-width: 45px;
-		max-height: 45px;
+		max-width: 20px;
+		max-height: 20px;
 	}
 }
 `;
